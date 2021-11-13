@@ -1,0 +1,230 @@
+// variables
+
+$colorWhite: #ffffff;
+$colorBlack: #000000;
+
+
+// mixins
+
+@mixin header_block($image_background){
+    background: url($image_background) center no-repeat;
+    background-size: cover;
+    height: 400px;
+    color: $colorWhite;
+}
+
+
+.header_block_basket{
+ @include header_block("../img/Rectangle30-min.jpg");
+}
+
+.basket{
+    @extend .catalog;
+}
+
+.basket_link{
+    @extend .catalog_link;
+}
+
+.basket_flex {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 64px;
+    flex-wrap: wrap;
+    row-gap: 64px;
+    }
+    
+.basket_card_block{
+    width: 786px;
+}
+
+.basket_fill_order{
+    width: 379px;
+    height: 556px;
+    background: #F7F6F6;
+    border-radius: 20px;
+}
+
+.basket_fill_order{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fill_order_title{
+    font-family: "Poppins",sans-serif;
+    font-style: normal;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    margin-top: 42px;
+}
+
+.basket_form{
+    width: 288px;;
+    box-sizing: border-box;
+
+}
+
+.basket_form input{
+    width: 288px;;
+    box-sizing: border-box;
+    height: 30px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 30px;
+    border: 0;
+    border-bottom: 1px solid #CACDD8;
+    background: #F7F6F6;
+    outline: none;
+}
+.basket_total{
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 64px;
+}
+
+.basket_form_button{
+    width: 288px;
+    width: 290px;
+    height: 41px;
+    border: 1px solid #040404;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 18px;
+}
+
+@keyframes basket_button_anim {
+    100% {
+        transform: rotateY(360deg);
+      }
+    
+}
+
+.basket_form_button:hover{
+    cursor: pointer;
+    background:  rgba(222, 215, 215, 0.5);
+    animation: basket_button_anim 1s ease;
+    transition: 0.2s;
+  
+}
+.basket_panel{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    border-bottom: 0.5px solid #CACDD8;
+}
+
+.basket_card{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding-bottom: 32px;
+    border-bottom:  0.5px solid #CACDD8;;
+}
+.card_wrap2{
+    margin-top: 8px;
+}
+.basket_card_wrap{
+    display: flex;
+    
+}
+.basket_card img{
+    width: 173px;
+    height: 173px;
+}
+
+.basket_card_description{
+    width: 276px;
+    margin-left: 31px;
+}
+.basket_card_title{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+}
+.basket_card_text{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #888888;
+    margin-top: 14px;
+    max-width: 250px;
+}
+.basket_card_price{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.basket_count_item{
+    width: 71px;
+    height: 51px;
+    background: #F7F6F6;
+    border-radius: 6px;
+    padding-left: 24px;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.fav,.del{
+    display: inline-block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 210%;
+    margin-top: 15px;
+    color:   $colorBlack;
+}
+.del{
+    margin-left: 30px;
+}
+
+.basket_button_block{
+    display: flex;
+    gap: 7px;
+    margin-top: 50px;
+}
+
+.clean_busket{
+    border: 1px solid   $colorBlack;
+    box-sizing: border-box;
+    border-radius: 50px;
+    background: none;
+    width: 200px;
+    height: 37px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s
+}
+.buy_busket{
+    @extend .clean_busket;
+    // background:   $colorBlack;
+    // color: $colorWhite;
+}
+.basket_button_block button:hover{
+     background: #000000;
+     color: #ffffff;
+}
+.basket_form input::-webkit-input-placeholder {
+     color: $colorBlack; 
+    }
+.basket_form input::-moz-placeholder {
+    color: $colorBlack; 
+} 
+.basket_form input:-moz-placeholder {
+     color: $colorBlack; 
+    } 
+.basket_form input:-ms-input-placeholder { 
+    color: $colorBlack;
+ }
