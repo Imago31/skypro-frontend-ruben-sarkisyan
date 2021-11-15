@@ -1,5 +1,5 @@
-"use strict";
-let item_name='Кресло';
-let item_price='1000';
-let item_resoult=`${item_name}, цена ${item_price} рублей`;
-alert(item_resoult);
+'use strict';
+let itemName='Кресло';
+let itemPrice='1000';
+let itemResoult=`${itemName}, цена ${itemPrice} рублей`;
+alert(itemResoult);
