@@ -2,7 +2,7 @@
 let itemName = 'Кресло';
 let itemPrice = '1000';
 let itemResoult = `${itemName}, цена ${itemPrice} рублей`;
-#alert(itemResoult);
+// alert(itemResoult);
 
 function creatrandomNumber(min,max){
   //  let random_number = Math.random() * (max - min) + min;
